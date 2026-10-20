@@ -247,6 +247,56 @@ body {
     color: var(--cyan);
 }
 
+.goal-panel {
+    border: 1px solid rgb(56 189 248 / 25%);
+    border-radius: 0.8rem;
+    background: linear-gradient(120deg, rgb(56 189 248 / 7%), rgb(52 211 153 / 4%));
+}
+
+.evidence-link {
+    transition: border-color 180ms ease, transform 180ms ease, background-color 180ms ease;
+}
+
+.evidence-link:hover {
+    border-color: rgb(56 189 248 / 55%);
+    background: var(--surface-raised);
+    transform: translateY(-2px);
+}
+
+.footer-brand {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer-heading {
+    margin-bottom: 0.85rem;
+    color: var(--text-primary);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.footer-links li + li {
+    margin-top: 0.45rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.footer-links a:hover {
+    color: var(--cyan);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+}
+
 .btn-info {
     --bs-btn-bg: var(--cyan);
     --bs-btn-border-color: var(--cyan);
