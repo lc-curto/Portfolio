@@ -98,136 +98,57 @@
 
     <main>
 
-        <!-- INÍCIO-->
-        <!-- py-4 / py-lg-5 = espaçamento vertical responsivo -->
+        <!-- INÍCIO -->
         <section id="inicio" class="py-4 py-lg-5 bg-body-tertiary border-bottom border-info border-2">
             <div class="container py-lg-4">
-
-                <!-- row = linha da grelha; g-4 / g-lg-5 = espaçamento entre colunas -->
-                <!-- align-items-center = alinhamento vertical ao centro -->
                 <div class="row align-items-center g-4 g-lg-5">
-
-                    <!-- col-12 = largura total em mobile -->
-                    <!-- col-lg-7 = ocupa 7 das 12 colunas a partir de lg -->
                     <div class="col-12 col-lg-7">
-
-                        <p class="font-monospace small mb-3 mb-lg-4 text-break">
-                            <span class="text-info">lucas@portfolio:~$</span>
-                            <span class="text-light">whoami</span>
-                        </p>
-
-                        <p class="text-light font-monospace small mb-3">
-                            SOFTWARE DEVELOPER IN PROGRESS
-                        </p>
-
-                        <!-- display-4 = título de grande dimensão -->
+                        <p class="font-monospace small mb-3 mb-lg-4 text-info">DESENVOLVIMENTO WEB · PRODUTO PRÓPRIO</p>
                         <h1 class="display-4 fw-bold mb-3 mb-lg-4">
-                            Olá, mundo.<br>
+                            Software para problemas reais.<br>
                             Sou o <span class="text-info">Lucas Curto.</span>
                         </h1>
-
-                        <p class="fs-6 text-light mb-4">
-                            Estou a desenvolver as minhas competências na área do
-                            desenvolvimento de software. Neste espaço partilho o meu
-                            percurso de aprendizagem, os projetos em desenvolvimento
-                            e as tecnologias exploradas ao longo da minha formação.
+                        <p class="fs-5 text-light mb-4">
+                            Trabalho na distribuição de cosméticos e estou a desenvolver o Cosmetics Hub,
+                            uma aplicação de gestão comercial inspirada nos desafios dessa operação.
+                            A API já tem uma base funcional; a interface web está no início.
                         </p>
-
-                        <!-- d-grid = botões em coluna em mobile -->
-                        <!-- d-sm-flex = botões em linha a partir de sm -->
-                        <!-- gap-2 / gap-sm-3 = espaçamento responsivo entre botões -->
-                        <div class="d-grid d-sm-flex flex-wrap gap-2 gap-sm-3 mb-4 mb-lg-5">
-
-                            <a class="btn btn-info font-monospace px-3 px-lg-4 py-3" href="#projetos">
-                                ./ver-projetos ↗
+                        <div class="d-grid d-sm-flex flex-wrap gap-2 gap-sm-3 mb-4">
+                            <a class="btn btn-info font-monospace px-3 px-lg-4 py-3" href="#cosmetics-hub">
+                                Ver Cosmetics Hub ↓
                             </a>
-
-                            <a class="btn btn-outline-secondary text-body font-monospace px-3 px-lg-4 py-3"
-                                href="https://www.linkedin.com/in/lucas-curto-779a692b9/" target="_blank"
-                                rel="noopener noreferrer">
-                                LinkedIn ↗
+                            <a class="btn btn-outline-info font-monospace px-3 px-lg-4 py-3"
+                                href="mailto:lucas.scurto@gmail.com?subject=Contacto%20atrav%C3%A9s%20do%20portef%C3%B3lio">
+                                Falar por email ↗
                             </a>
-
                         </div>
-
-                        <!-- d-flex = elementos em linha; flex-wrap = permite mudar de linha -->
-                        <div class="d-flex flex-wrap gap-2 gap-sm-3 small font-monospace text-light">
-                            <span>
-                                <span class="text-success">●</span>
-                                Em aprendizagem
-                            </span>
-
-                            <!-- d-none d-sm-inline = separador visível a partir de sm -->
-                            <span class="d-none d-sm-inline">/</span>
-
-                            <span>Desenvolvimento de software</span>
-                        </div>
-
+                        <p class="small font-monospace text-light mb-0">
+                            Experiência no setor · APIs · Aplicações web
+                        </p>
                     </div>
-
-                    <!-- d-none d-lg-block = escondido em mobile, visível a partir de lg -->
-                    <!-- col-lg-5 = ocupa 5 das 12 colunas em ecrãs grandes -->
                     <div class="d-none d-lg-block col-lg-5">
-                        <figure class="mb-0">
-
-                            <div class="border border-secondary rounded-3 bg-body overflow-hidden">
-
-                                <!-- Cabeçalho do cartão de código -->
-                                <div
-                                    class="d-flex justify-content-between align-items-center border-bottom border-secondary px-3 px-lg-4 py-3 font-monospace small">
-                                    <span>
-                                        <span class="badge text-bg-info rounded-1 me-2">JS</span>
-                                        lucas-curto.js
-                                    </span>
-
-                                    <span class="text-light ms-2">•••</span>
-                                </div>
-
-                                <!-- p-3 / p-lg-4 = padding responsivo -->
-                                <div class="p-3 p-lg-4 font-monospace small">
-                                    <div class="d-flex gap-3">
-
-                                        <!-- flex-shrink-0 = impede o encolhimento dos números -->
-                                        <div class="text-light text-end user-select-none flex-shrink-0 lh-lg">
-                                            01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10
-                                        </div>
-
-                                        <!-- flex-grow-1 = ocupa o espaço disponível -->
-                                        <!-- overflow-auto = permite scroll se o conteúdo ultrapassar o espaço -->
-                                        <div class="flex-grow-1 overflow-auto">
-                                            <pre class="m-0 font-monospace small lh-lg"><code><span class="text-info">const</span> developer = {
-  nome:     <span class="text-success">'Lucas Curto'</span>,
-  foco:     <span class="text-success">'Desenvolvimento'</span>,
-  percurso: <span class="text-success">'Em aprendizagem'</span>,
-  objetivo: <span class="text-success">'Evoluir na prática'</span>
-};
-
-<span class="text-light">// Estado atual</span>
-<span class="text-info">const</span> learning = <span class="text-warning">true</span>;
-
-<span class="text-light">// Próximo passo</span>
-<span class="text-info">continue</span>();</code></pre>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <!-- Rodapé do cartão de código -->
-                                <div
-                                    class="d-flex flex-wrap justify-content-between gap-2 border-top border-secondary px-3 px-lg-4 py-3 small font-monospace text-light">
-                                    <span><span class="text-success">●</span> learning mode</span>
-                                    <span>JavaScript · UTF-8</span>
-                                </div>
-
+                        <aside class="border rounded-3 bg-body overflow-hidden" aria-label="Resumo do Cosmetics Hub">
+                            <div class="d-flex justify-content-between align-items-center border-bottom px-3 py-3 font-monospace small">
+                                <span>PRODUCT / COSMETICS_HUB</span>
+                                <span class="badge text-bg-warning">EM DESENVOLVIMENTO</span>
                             </div>
-
-                            <figcaption class="small font-monospace text-light mt-3">
-                                <span class="text-info">//</span> O melhor código ainda está por escrever.
-                            </figcaption>
-
-                        </figure>
+                            <div class="p-3 p-lg-4">
+                                <h2 class="h5 mb-3">Âmbito do produto</h2>
+                                <p class="text-light mb-3">Centralizar os principais fluxos comerciais de uma empresa de distribuição.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge text-bg-secondary fw-normal">Empresas</span>
+                                    <span class="badge text-bg-secondary fw-normal">Clientes</span>
+                                    <span class="badge text-bg-secondary fw-normal">Catálogo</span>
+                                    <span class="badge text-bg-secondary fw-normal">Stock</span>
+                                    <span class="badge text-bg-secondary fw-normal">Encomendas</span>
+                                    <span class="badge text-bg-secondary fw-normal">Contas a receber</span>
+                                </div>
+                            </div>
+                            <div class="border-top px-3 py-3 small font-monospace text-light">
+                                API: FastAPI · Web: React + TypeScript
+                            </div>
+                        </aside>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -235,88 +156,21 @@
         <!-- SOBRE -->
         <section id="sobre" class="py-4 py-lg-5 bg-body border-bottom border-info border-2">
             <div class="container py-lg-3">
-                <div class="row">
-                    <div class="col-12">
-
-                        <!-- Cabeçalho do README -->
-                        <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
-                            <span class="font-monospace small">README.md</span>
-                            <span class="font-monospace small text-light">lucas_curto</span>
-                        </div>
-
-                        <!-- Apresentação -->
-                        <div class="mb-4">
-                            <h2 class="h4 mb-3">
-                                Olá, mundo! <span>👋</span>
-                            </h2>
-
-                            <p class="fs-5 lh-base mb-0">
-                                Sou o Lucas, estou a aprender desenvolvimento de software
-                                e a transformar conhecimento em projetos.
-                            </p>
-                        </div>
-
-                        <!-- Tecnologias e áreas de estudo -->
-                        <div class="mb-4">
-                            <h3 class="h6 font-monospace mb-3">
-                                <span class="text-info">##</span> A explorar
-                            </h3>
-
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge border border-secondary text-body fw-normal py-2 px-3">Algoritmos</span>
-                                <span class="badge border border-secondary text-body fw-normal py-2 px-3">Programação
-                                    OO</span>
-                                <span class="badge border border-secondary text-body fw-normal py-2 px-3">Web</span>
-                                <span class="badge border border-secondary text-body fw-normal py-2 px-3">Bases de
-                                    dados</span>
-                                <span class="badge border border-secondary text-body fw-normal py-2 px-3">Qualidade de
-                                    software</span>
-                                <span class="badge border border-secondary text-body fw-normal py-2 px-3">Apps
-                                    móveis</span>
-                            </div>
-                        </div>
-
-                        <!-- Princípios -->
-                        <div class="mb-4">
-                            <h3 class="h6 font-monospace mb-3">
-                                <span class="text-info">##</span> A minha abordagem
-                            </h3>
-
-                            <div class="row g-3">
-                                <div class="col-12 col-md-6">
-                                    <div class="h-100 border rounded-3 p-3">
-                                        <p class="font-monospace small text-info mb-2">
-                                            01 // LEARN
-                                        </p>
-                                        <h4 class="h6 mb-1">Aprender fazendo</h4>
-                                        <p class="small text-light mb-0">
-                                            Praticar, experimentar e resolver problemas.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    <div class="h-100 border rounded-3 p-3">
-                                        <p class="font-monospace small text-info mb-2">
-                                            02 // GROW
-                                        </p>
-                                        <h4 class="h6 mb-1">Evoluir continuamente</h4>
-                                        <p class="small text-light mb-0">
-                                            Melhorar o código, um passo de cada vez.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Fecho -->
-                        <div class="border-top pt-3">
-                            <p class="font-monospace small mb-0">
-                                <span class="text-info">const</span> mindset =
-                                <span class="text-info">"always_learning";</span>
-                            </p>
-                        </div>
-
+                <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                        <p class="text-info font-monospace small mb-3">01 / CONTEXTO</p>
+                        <h2 class="h2 fw-semibold mb-0">Do conhecimento da operação ao software.</h2>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <p class="fs-5 lh-base">
+                            A experiência na distribuição de cosméticos permite-me trabalhar num problema que conheço de perto:
+                            manter informação comercial dispersa organizada e útil no dia a dia.
+                        </p>
+                        <p class="text-light mb-0">
+                            No Cosmetics Hub, estou a transformar esse contexto num produto incremental. O objetivo é reunir
+                            empresas, clientes, catálogo, inventário, encomendas e valores a receber numa única aplicação.
+                            Distingo o que já está implementado do que continua planeado.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -325,197 +179,71 @@
         <!-- TECNOLOGIAS -->
         <section id="stack" class="py-4 py-lg-5 bg-body-tertiary border-bottom border-info border-2">
             <div class="container py-lg-4">
-
-                <!-- Cabeçalho da secção -->
                 <div class="row g-3 mb-4 mb-lg-5 align-items-end">
-
                     <div class="col-12 col-lg-7">
-                        <p class="text-info font-monospace small mb-3">
-                            02 / TECH_STACK
-                        </p>
-
-                        <h2 class="h2 fw-semibold mb-0">
-                            Tecnologias &amp; áreas de aprendizagem.
-                        </h2>
+                        <p class="text-info font-monospace small mb-3">02 / STACK</p>
+                        <h2 class="h2 fw-semibold mb-0">Tecnologias por evidência.</h2>
                     </div>
-                    <!-- Descrição visível em todos os tamanhos de ecrã -->
                     <div class="col-12 col-lg-5">
-                        <p class="text-light mb-0">
-                            Tecnologias e áreas técnicas relacionadas com a formação
-                            e os projetos apresentados neste portefólio.
-                        </p>
+                        <p class="text-light mb-0">Separadas entre as que já aplico em projetos e as que fazem parte da minha formação.</p>
                     </div>
-
                 </div>
-
-                <!-- Grelha dos cartões -->
-                <!-- col-12 = 1 cartão por linha em mobile -->
-                <!-- col-md-6 = 2 cartões por linha a partir de md -->
-                <!-- col-lg-4 = 3 cartões por linha a partir de lg -->
                 <div class="row g-3 g-lg-4">
-
-                    <!-- FRONT-END -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <!-- card = componente de cartão; h-100 = altura total da linha -->
+                    <div class="col-12 col-lg-8">
                         <article class="card bg-body h-100 rounded-2">
-                            <!-- card-body = conteúdo; p-3 / p-lg-4 = padding responsivo -->
                             <div class="card-body p-3 p-lg-4">
-
-                                <p class="font-monospace small text-info mb-3 mb-lg-4">
-                                    &lt;/&gt; FRONT-END
-                                </p>
-
-                                <h3 class="h5 mb-3">Interfaces Web</h3>
-
-                                <p class="text-light lh-lg mb-3 mb-lg-4">
-                                    Estruturação de páginas e construção de interfaces
-                                    Web com recurso às tecnologias de front-end.
-                                </p>
-
-                                <!-- d-flex flex-wrap gap-2 = etiquetas flexíveis com espaçamento -->
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">HTML5</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">CSS3</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">Bootstrap
-                                        5</span>
+                                <p class="font-monospace small text-success mb-3">USADAS EM PROJETOS</p>
+                                <div class="row g-4">
+                                    <div class="col-12 col-md-6">
+                                        <h3 class="h5">Cosmetics Hub · API</h3>
+                                        <p class="small text-light">Base funcional com endpoint de saúde e testes automatizados.</p>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge text-bg-secondary fw-normal">Python</span>
+                                            <span class="badge text-bg-secondary fw-normal">FastAPI</span>
+                                            <span class="badge text-bg-secondary fw-normal">PostgreSQL</span>
+                                            <span class="badge text-bg-secondary fw-normal">Testes</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h3 class="h5">Cosmetics Hub · Web</h3>
+                                        <p class="small text-light">Frontend React/TypeScript na fase de estrutura inicial.</p>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge text-bg-secondary fw-normal">React</span>
+                                            <span class="badge text-bg-secondary fw-normal">TypeScript</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <h3 class="h5">Projeto colaborativo · CESAE Lisboa</h3>
+                                        <p class="small text-light">Site responsivo desenvolvido em grupo.</p>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge text-bg-secondary fw-normal">HTML5</span>
+                                            <span class="badge text-bg-secondary fw-normal">CSS3</span>
+                                            <span class="badge text-bg-secondary fw-normal">Bootstrap</span>
+                                            <span class="badge text-bg-secondary fw-normal">Git/GitHub</span>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
                         </article>
                     </div>
-
-                    <!-- WORKFLOW -->
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-lg-4">
                         <article class="card bg-body h-100 rounded-2">
                             <div class="card-body p-3 p-lg-4">
-
-                                <p class="font-monospace small text-success mb-3 mb-lg-4">
-                                    ± WORKFLOW
-                                </p>
-
-                                <h3 class="h5 mb-3">Controlo de versões</h3>
-
-                                <p class="text-light lh-lg mb-3 mb-lg-4">
-                                    Utilização de ferramentas de controlo de versões
-                                    e colaboração para organizar projetos de software.
-                                </p>
-
+                                <p class="font-monospace small text-info mb-3">EM FORMAÇÃO</p>
+                                <h3 class="h5">Fundamentos e novas áreas</h3>
+                                <p class="text-light">Tópicos da formação que continuo a aprofundar, sem os apresentar como experiência profissional.</p>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">Git</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">GitHub</span>
+                                    <span class="badge border border-secondary fw-normal">Algoritmos</span>
+                                    <span class="badge border border-secondary fw-normal">OOP</span>
+                                    <span class="badge border border-secondary fw-normal">SQL/NoSQL</span>
+                                    <span class="badge border border-secondary fw-normal">Qualidade de software</span>
+                                    <span class="badge border border-secondary fw-normal">Design patterns</span>
+                                    <span class="badge border border-secondary fw-normal">UML</span>
+                                    <span class="badge border border-secondary fw-normal">Mobile</span>
                                 </div>
-
                             </div>
                         </article>
                     </div>
-
-                    <!-- BACK-END -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="card bg-body h-100 rounded-2">
-                            <div class="card-body p-3 p-lg-4">
-
-                                <p class="font-monospace small text-warning mb-3 mb-lg-4">
-                                    ⚙ BACK-END
-                                </p>
-
-                                <h3 class="h5 mb-3">Desenvolvimento back-end</h3>
-
-                                <p class="text-light lh-lg mb-3 mb-lg-4">
-                                    Projeto individual em desenvolvimento, com uma API,
-                                    endpoint de saúde, testes automatizados e PostgreSQL
-                                    configurado para desenvolvimento local.
-                                </p>
-
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">API</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">PostgreSQL</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">Testes</span>
-                                </div>
-
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- ALGORITMOS -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="card bg-body h-100 rounded-2">
-                            <div class="card-body p-3 p-lg-4">
-
-                                <p class="font-monospace small text-info mb-3 mb-lg-4">
-                                    { } PROGRAMMING
-                                </p>
-
-                                <h3 class="h5 mb-3">Algoritmos e orientação a objetos</h3>
-
-                                <p class="text-light lh-lg mb-3 mb-lg-4">
-                                    Áreas da formação que incluem construção de algoritmos,
-                                    desenvolvimento orientado a objetos e padrões de desenho.
-                                </p>
-
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">Algoritmos</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">OOP</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">Design
-                                        Patterns</span>
-                                </div>
-
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- BASES DE DADOS -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="card bg-body h-100 rounded-2">
-                            <div class="card-body p-3 p-lg-4">
-
-                                <p class="font-monospace small text-success mb-3 mb-lg-4">
-                                    ▤ DATABASES
-                                </p>
-
-                                <h3 class="h5 mb-3">Bases de dados</h3>
-
-                                <p class="text-light lh-lg mb-3 mb-lg-4">
-                                    Área de formação que abrange bases de dados relacionais
-                                    e não relacionais, incluindo conteúdos de SQL e NoSQL.
-                                </p>
-
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">SQL</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">NoSQL</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">PostgreSQL</span>
-                                </div>
-
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- MOBILE -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="card bg-body h-100 rounded-2">
-                            <div class="card-body p-3 p-lg-4">
-
-                                <p class="font-monospace small text-warning mb-3 mb-lg-4">
-                                    ▱ MOBILE
-                                </p>
-
-                                <h3 class="h5 mb-3">Aplicações móveis</h3>
-
-                                <p class="text-light lh-lg mb-3 mb-lg-4">
-                                    Áreas curriculares de desenvolvimento móvel para Android
-                                    nativo, iOS e projetos Web e mobile.
-                                </p>
-
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">Android</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">iOS</span>
-                                    <span class="badge text-bg-secondary fw-normal font-monospace p-2">Web &amp;
-                                        Mobile</span>
-                                </div>
-
-                            </div>
-                        </article>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -523,172 +251,69 @@
         <!-- PROJETOS -->
         <section id="projetos" class="py-4 py-lg-5 bg-body border-bottom border-info border-2">
             <div class="container py-lg-4">
-
-                <!-- Cabeçalho da secção -->
                 <div class="row g-3 mb-4 mb-lg-5 align-items-end">
-
                     <div class="col-12 col-lg-7">
-                        <p class="text-info font-monospace small mb-3">
-                            03 / SELECTED_WORK
-                        </p>
-
-                        <h2 class="h2 fw-semibold mb-0">
-                            Projetos em desenvolvimento.
-                        </h2>
+                        <p class="text-info font-monospace small mb-3">03 / PROJETO PRINCIPAL</p>
+                        <h2 class="h2 fw-semibold mb-0">Cosmetics Hub.</h2>
                     </div>
-                    <!-- Descrição visível em todos os tamanhos de ecrã -->
                     <div class="col-12 col-lg-5">
-                        <p class="text-light mb-0">
-                            Um projeto colaborativo, um projeto individual e o repositório
-                            dedicado ao meu percurso de aprendizagem.
-                        </p>
+                        <p class="text-light mb-0">Um produto em desenvolvimento, inspirado na experiência real no setor da distribuição de cosméticos.</p>
                     </div>
-
                 </div>
-
-                <!-- Grelha responsiva: 1, 2 ou 3 cartões por linha -->
+                <article id="cosmetics-hub" class="card bg-body-tertiary rounded-2 mb-4">
+                    <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2 p-3 p-lg-4 bg-transparent">
+                        <span class="font-monospace small text-light">PROJETO INDIVIDUAL</span>
+                        <span class="badge text-bg-warning font-monospace rounded-1">EM DESENVOLVIMENTO</span>
+                    </div>
+                    <div class="card-body p-3 p-lg-4">
+                        <h3 class="h3 mb-3">Gestão comercial para empresas de cosméticos</h3>
+                        <p class="text-light lh-lg mb-4">
+                            O objetivo é reunir num só sistema os dados e fluxos de empresas, clientes, catálogo,
+                            inventário, encomendas e contas a receber. A implementação está a ser feita por etapas.
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <div class="h-100 border rounded-2 p-3">
+                                    <h4 class="h5">API · base funcional</h4>
+                                    <p class="small text-light mb-0">Endpoint de saúde, testes automatizados e PostgreSQL configurado para desenvolvimento local.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="h-100 border rounded-2 p-3">
+                                    <h4 class="h5">Aplicação web · scaffold inicial</h4>
+                                    <p class="small text-light mb-0">Frontend separado em React e TypeScript; as funcionalidades de produto ainda estão por implementar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 p-3 pt-0 p-lg-4">
+                        <div class="d-grid d-sm-flex gap-2">
+                            <a class="btn btn-outline-info font-monospace" href="https://github.com/lc-curto/distribution-hub-api" target="_blank" rel="noopener noreferrer">Ver API ↗</a>
+                            <a class="btn btn-outline-info font-monospace" href="https://github.com/lc-curto/distribution-hub-web" target="_blank" rel="noopener noreferrer">Ver frontend ↗</a>
+                        </div>
+                    </div>
+                </article>
                 <div class="row g-3 g-lg-4">
-
-                    <!-- PROJETO COLABORATIVO -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <!-- h-100 = cartões com altura igual -->
+                    <div class="col-12 col-md-6">
                         <article class="card h-100 bg-body-tertiary rounded-2">
-
-                            <!-- card-header = cabeçalho do cartão -->
-                            <!-- justify-content-between = elementos nas extremidades -->
-                            <div
-                                class="card-header d-flex justify-content-between align-items-center p-3 p-lg-4 bg-transparent">
-                                <span class="font-monospace small text-light">PROJECT_01</span>
-                                <span class="badge text-bg-info font-monospace rounded-1">TEAM</span>
-                            </div>
-
                             <div class="card-body p-3 p-lg-4">
-
-                                <!-- d-none d-lg-block = ícone apenas em ecrãs grandes -->
-                                <div class="d-none d-lg-block display-6 font-monospace text-info mb-4">
-                                    &lt;/&gt;
-                                </div>
-
-                                <h3 class="h4 mb-3">CESAE Lisboa — Grupo 2</h3>
-
-                                <p class="text-light lh-lg mb-3 mb-lg-4">
-                                    Projeto colaborativo desenvolvido em grupo no âmbito
-                                    do CESAE Lisboa, com o objetivo de criar uma página Web
-                                    responsiva utilizando HTML5, CSS3, Bootstrap e Git/GitHub.
-                                </p>
+                                <p class="font-monospace small text-info">PROJETO COLABORATIVO</p>
+                                <h3 class="h4">CESAE Lisboa — Grupo 2</h3>
+                                <p class="text-light">Site responsivo desenvolvido em grupo com HTML, CSS, Bootstrap e Git/GitHub.</p>
+                                <a class="btn btn-outline-info w-100 font-monospace" href="https://github.com/danielatorresalmeida/cesae-lisboa-grupo2" target="_blank" rel="noopener noreferrer">Ver repositório ↗</a>
                             </div>
-
-                            <!-- card-footer = rodapé do cartão -->
-                            <!-- bg-transparent = fundo transparente; border-0 = sem borda -->
-                            <div class="card-footer bg-transparent border-0 p-3 pt-0 p-lg-4">
-                                <p class="d-none d-lg-block font-monospace small text-light">
-                                    // HTML5 · CSS3 · Bootstrap · Git
-                                </p>
-
-                                <!-- w-100 = botão ocupa toda a largura -->
-                                <!-- text-start = texto alinhado à esquerda -->
-                                <a class="btn btn-outline-info w-100 text-start font-monospace small py-2"
-                                    href="https://github.com/danielatorresalmeida/cesae-lisboa-grupo2" target="_blank"
-                                    rel="noopener noreferrer">
-                                    Ver repositório <span class="float-end">↗</span>
-                                </a>
-                            </div>
-
                         </article>
                     </div>
-
-                    <!-- PROJETO INDIVIDUAL -->
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6">
                         <article class="card h-100 bg-body-tertiary rounded-2">
-
-                            <div
-                                class="card-header d-flex justify-content-between align-items-center p-3 p-lg-4 bg-transparent">
-                                <span class="font-monospace small text-light">PROJECT_02</span>
-                                <span class="badge text-bg-success font-monospace rounded-1">API + WEB</span>
-                            </div>
-
                             <div class="card-body p-3 p-lg-4">
-                                <div class="d-none d-lg-block display-6 font-monospace text-success mb-4">
-                                    { }
-                                </div>
-
-                                <h3 class="h4 mb-3">Distribution Hub</h3>
-
-                                <p class="text-light lh-lg mb-3">
-                                    Projeto individual em desenvolvimento, dividido entre
-                                    uma API com endpoint de saúde, testes automatizados e
-                                    PostgreSQL configurado para desenvolvimento local, e
-                                    uma aplicação frontend separada em React e TypeScript.
-                                </p>
-
-                                <p class="small text-light mb-0">
-                                    API: base funcional. Frontend: estrutura inicial.
-                                </p>
+                                <p class="font-monospace small text-info">PERCURSO</p>
+                                <h3 class="h4">A minha jornada</h3>
+                                <p class="text-light">Notas e documentação do percurso de aprendizagem em desenvolvimento de software.</p>
+                                <a class="btn btn-outline-info w-100 font-monospace" href="https://github.com/lc-curto/lc-curto" target="_blank" rel="noopener noreferrer">Ver repositório pessoal ↗</a>
                             </div>
-
-                            <div class="card-footer bg-transparent border-0 p-3 pt-0 p-lg-4">
-                                <p class="d-none d-lg-block font-monospace small text-light">
-                                    // Backend API · React · TypeScript
-                                </p>
-
-                                <!-- d-grid gap-2 = botões em coluna com espaçamento -->
-                                <div class="d-grid gap-2">
-                                    <a class="btn btn-outline-info w-100 text-start font-monospace small py-2"
-                                        href="https://github.com/lc-curto/distribution-hub-api" target="_blank"
-                                        rel="noopener noreferrer">
-                                        Ver API <span class="float-end">↗</span>
-                                    </a>
-
-                                    <a class="btn btn-outline-info w-100 text-start font-monospace small py-2"
-                                        href="https://github.com/lc-curto/distribution-hub-web" target="_blank"
-                                        rel="noopener noreferrer">
-                                        Ver frontend <span class="float-end">↗</span>
-                                    </a>
-                                </div>
-                            </div>
-
                         </article>
                     </div>
-
-                    <!-- PERCURSO PESSOAL -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="card h-100 bg-body-tertiary rounded-2">
-
-                            <div
-                                class="card-header d-flex justify-content-between align-items-center p-3 p-lg-4 bg-transparent">
-                                <span class="font-monospace small text-light">PROJECT_03</span>
-                                <span class="badge text-bg-warning font-monospace rounded-1">JOURNEY</span>
-                            </div>
-
-                            <div class="card-body p-3 p-lg-4">
-                                <div class="d-none d-lg-block display-6 font-monospace text-warning mb-4">
-                                    ~/
-                                </div>
-
-                                <h3 class="h4 mb-3">A minha jornada</h3>
-
-                                <p class="text-light lh-lg mb-3 mb-lg-4">
-                                    Repositório pessoal dedicado ao meu percurso,
-                                    à aprendizagem e à documentação da minha evolução
-                                    na área do desenvolvimento de software.
-                                </p>
-                            </div>
-
-                            <div class="card-footer bg-transparent border-0 p-3 pt-0 p-lg-4">
-                                <p class="d-none d-lg-block font-monospace small text-light">
-                                    // Aprendizagem e evolução
-                                </p>
-
-                                <a class="btn btn-outline-info w-100 text-start font-monospace small py-2"
-                                    href="https://github.com/lc-curto/lc-curto" target="_blank"
-                                    rel="noopener noreferrer">
-                                    Ver repositório pessoal <span class="float-end">↗</span>
-                                </a>
-                            </div>
-
-                        </article>
-                    </div>
-
                 </div>
             </div>
         </section>
