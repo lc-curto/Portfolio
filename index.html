@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description"
-        content="Portefólio de Lucas Curto, dedicado à aprendizagem e ao desenvolvimento de software.">
+        content="Portefólio de Lucas Curto: desenvolvimento web full-stack, projetos práticos e aprendizagem de software.">
     <meta name="theme-color" content="#6c757d">
+    <link rel="canonical" href="https://lc-curto.github.io/Portifolio/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lucas Curto | Desenvolvimento de software">
+    <meta property="og:description" content="Portefólio de Lucas Curto: desenvolvimento web full-stack e projetos práticos.">
+    <meta property="og:url" content="https://lc-curto.github.io/Portifolio/">
 
-    <title>Lucas Curto | Software Developer</title>
+    <title>Lucas Curto | Desenvolvimento de software</title>
     <link rel="shortcut icon" href="images/transferir.svg" type="image/x-icon">
 
     <!-- Bootstrap 5.3.8: folha de estilos -->
@@ -322,7 +327,7 @@
             <div class="container py-lg-4">
 
                 <!-- Cabeçalho da secção -->
-                <div class="container g-3 mb-4 mb-lg-5">
+                <div class="row g-3 mb-4 mb-lg-5 align-items-end">
 
                     <div class="col-12 col-lg-7">
                         <p class="text-info font-monospace small mb-3">
@@ -333,9 +338,8 @@
                             Tecnologias &amp; áreas de aprendizagem.
                         </h2>
                     </div>
-                    <br>
-                    <!-- d-none d-lg-block = descrição escondida abaixo de lg -->
-                    <div class="d-none d-lg-block col-lg-5">
+                    <!-- Descrição visível em todos os tamanhos de ecrã -->
+                    <div class="col-12 col-lg-5">
                         <p class="text-light mb-0">
                             Tecnologias e áreas técnicas relacionadas com a formação
                             e os projetos apresentados neste portefólio.
@@ -521,7 +525,7 @@
             <div class="container py-lg-4">
 
                 <!-- Cabeçalho da secção -->
-                <div class="container g-3 mb-4 mb-lg-5">
+                <div class="row g-3 mb-4 mb-lg-5 align-items-end">
 
                     <div class="col-12 col-lg-7">
                         <p class="text-info font-monospace small mb-3">
@@ -532,9 +536,8 @@
                             Projetos em desenvolvimento.
                         </h2>
                     </div>
-                    <br>
-                    <!-- Descrição visível apenas a partir de lg -->
-                    <div class="d-none d-lg-block col-lg-5">
+                    <!-- Descrição visível em todos os tamanhos de ecrã -->
+                    <div class="col-12 col-lg-5">
                         <p class="text-light mb-0">
                             Um projeto colaborativo, um projeto individual e o repositório
                             dedicado ao meu percurso de aprendizagem.
@@ -698,9 +701,8 @@
                 <!-- g-4 / g-lg-5 = espaçamento responsivo entre colunas -->
                 <div class="row align-items-center g-4 g-lg-5">
 
-                    <!-- d-none d-lg-block = texto escondido em mobile -->
-                    <!-- col-lg-6 = metade da grelha em ecrãs grandes -->
-                    <div class="d-none d-lg-block col-lg-6">
+                    <!-- Contactos e texto introdutório visíveis em todos os ecrãs -->
+                    <div class="col-12 col-lg-6">
                         <p class="text-info font-monospace small mb-3">
                             05 / CONTACT
                         </p>
@@ -742,43 +744,25 @@
                         </div>
                     </div>
 
-                    <!-- Formulário: largura total em mobile e metade em lg -->
+                    <!-- Contacto direto: o site é estático e não processa formulários -->
                     <div class="col-12 col-lg-6">
                         <div class="border rounded-2 bg-body overflow-hidden">
-
                             <div class="border-bottom px-3 px-lg-4 py-3 font-monospace text-info">
-                                &gt; nova_mensagem
+                                &gt; contacto_direto
                             </div>
-
-                            <!-- form-control = estilo Bootstrap para campos de formulário -->
-                            <!-- required = campo obrigatório com validação HTML nativa -->
-                            <!-- IMPORTANTE: action="#" é provisório; não envia mensagens para um destinatário -->
-                            <form class="p-3 p-sm-4" action="#" method="post">
-
-                                <div class="mb-3">
-                                    <label class="form-label small" for="nome">Nome</label>
-                                    <input class="form-control bg-body-tertiary py-2" id="nome" name="nome" type="text"
-                                        placeholder="O teu nome" autocomplete="name" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label small" for="email">Email</label>
-                                    <input class="form-control bg-body-tertiary py-2" id="email" name="email"
-                                        type="email" placeholder="nome@exemplo.pt" autocomplete="email" required>
-                                </div>
-
-                                <div class="mb-3 mb-lg-4">
-                                    <label class="form-label small" for="mensagem">Mensagem</label>
-                                    <textarea class="form-control bg-body-tertiary" id="mensagem" name="mensagem"
-                                        rows="4" placeholder="O que tens em mente?" required></textarea>
-                                </div>
-
-                                <!-- btn-info = botão destacado; w-100 = largura total -->
-                                <button class="btn btn-info w-100 py-3 font-monospace" type="submit">
-                                    enviar_mensagem() ↗
-                                </button>
-
-                            </form>
+                            <div class="p-3 p-sm-4">
+                                <p class="text-light mb-4">
+                                    Este portefólio é um site estático. Para garantir que a tua mensagem chega,
+                                    contacta-me diretamente por email.
+                                </p>
+                                <a class="btn btn-info w-100 py-3 font-monospace"
+                                    href="mailto:lucas.scurto@gmail.com?subject=Contacto%20atrav%C3%A9s%20do%20portef%C3%B3lio">
+                                    Enviar email ↗
+                                </a>
+                                <p class="small text-light mt-3 mb-0 text-break">
+                                    lucas.scurto@gmail.com
+                                </p>
+                            </div>
                         </div>
                     </div>
 
