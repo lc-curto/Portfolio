@@ -338,6 +338,58 @@ button:focus-visible {
     box-shadow: none;
 }
 
+@media (max-width: 991.98px) {
+    .navbar-slate .navbar-nav {
+        width: 100%;
+        align-items: center !important;
+    }
+
+    .navbar-slate .navbar-nav .nav-item {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-slate .navbar-nav .nav-link {
+        display: flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar-slate .navbar-nav .btn {
+        display: inline-flex;
+        min-width: 9rem;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .site-footer .container-lg,
+    .site-footer .row > div {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .footer-links li + li {
+        margin-top: 0;
+    }
+
+    .footer-links a {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 575.98px) {
     main.container-lg {
         padding-top: 1rem !important;
@@ -354,6 +406,27 @@ button:focus-visible {
 
     .hero-card {
         min-height: 0;
+    }
+
+    .hero-actions {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.65rem !important;
+    }
+
+    .hero-actions .hero-project-link,
+    .hero-actions .hero-email {
+        display: inline-flex;
+        width: 100%;
+        min-height: 2.75rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-actions .hero-social-links {
+        justify-self: center;
+        justify-content: center;
+        margin-top: 0.1rem;
     }
 
     .hero-card h1 {
