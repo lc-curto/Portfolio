@@ -121,6 +121,16 @@ body {
     line-height: 1.75;
 }
 
+.social-link {
+    display: inline-flex;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
 .hero-product-card {
     background: linear-gradient(155deg, #15243a, #101a2c);
 }
@@ -254,6 +264,11 @@ body {
 }
 
 .evidence-link {
+    display: flex;
+    min-height: 3.25rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
     transition: border-color 180ms ease, transform 180ms ease, background-color 180ms ease;
 }
 
@@ -324,12 +339,42 @@ button:focus-visible {
 }
 
 @media (max-width: 575.98px) {
+    main.container-lg {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    main.container-lg > section {
+        margin-bottom: 1rem !important;
+    }
+
+    .bento-card.p-4 {
+        padding: 1.2rem !important;
+    }
+
     .hero-card {
         min-height: 0;
     }
 
     .hero-card h1 {
-        font-size: clamp(2.2rem, 11vw, 3.15rem);
+        margin-bottom: 0.75rem !important;
+        font-size: clamp(1.9rem, 8.8vw, 2.2rem);
+        line-height: 1.08;
+    }
+
+    .hero-card .lead {
+        margin-bottom: 1rem !important;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .tech-chip {
+        padding: 0.42rem 0.7rem;
+        font-size: 0.78rem;
+    }
+
+    .evidence-link {
+        min-height: 3.5rem;
     }
 }
 
