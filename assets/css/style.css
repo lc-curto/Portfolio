@@ -1034,15 +1034,15 @@ main.container {
 
 @media(min-width:841px) {
     main.container {
-        width: 100%;
-        max-width: 1320px;
+        width: calc(100% - 48px);
+        max-width: 1280px;
         padding-right: 12px;
         padding-left: 12px
     }
 
     .site-nav,
     .site-footer {
-        width: min(100% - 32px, 1320px)
+        width: min(100% - 32px, 1280px)
     }
 
     .content-section,
@@ -1154,6 +1154,12 @@ main.container {
 }
 
 @media(max-width:840px) {
+    main.container {
+        width: calc(100% - 32px);
+        padding-right: 0;
+        padding-left: 0
+    }
+
     .journey-option-one {
         padding-top: 28px
     }
