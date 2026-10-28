@@ -419,6 +419,11 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+.project-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
 .experience {
   position: relative;
   background: var(--white);
@@ -454,6 +459,7 @@ h1 {
   padding: 20px 0 40px;
 }
 .timeline-item {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12%;
@@ -498,6 +504,9 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
+.timeline-item.visible .year {
+  color: var(--ink);
+}
 .timeline-content .date {
   font:
     10px "DM Mono",
@@ -515,19 +524,6 @@ h1 {
   font-size: 13px;
   color: #626577;
   margin: 0;
-}
-.timeline-dot {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--ink);
-  border: 4px solid white;
-  box-shadow: 0 0 0 1px var(--ink);
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 90px;
-  z-index: 3;
 }
 .contact {
   background: var(--dark);
@@ -734,8 +730,7 @@ h1 {
     transform: none;
     padding: 18px;
   }
-  .timeline-svg,
-  .timeline-dot {
+  .timeline-svg {
     display: none;
   }
   .contact-grid {
@@ -878,11 +873,6 @@ h1 {
     justify-self: end;
     order: initial;
   }
-  .timeline-dot {
-    top: 50%;
-    left: 50%;
-    margin-top: 0;
-  }
 }
 .project-with-image {
   display: flex;
@@ -906,6 +896,9 @@ h1 {
     background-color 0.2s,
     border-color 0.2s,
     transform 0.2s;
+}
+.project-links .project-link {
+  margin-top: 0;
 }
 .project-link:hover {
   background: #eff0f6;
@@ -1179,6 +1172,12 @@ body {
   .side-menu-line {
     flex-basis: 72px;
     height: 72px;
+  }
+}
+
+@media (max-width: 800px) {
+  .side-menu {
+    display: none !important;
   }
 }
 

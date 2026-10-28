@@ -124,6 +124,9 @@ function setupTimeline(timeline) {
           window.scrollY +
           item.offsetTop,
       ),
+      itemProgresses: items.map(
+        (item) => (item.offsetTop + item.offsetHeight * 0.35) / height,
+      ),
     };
     lastVisibleIndex = -1;
   };
@@ -149,9 +152,9 @@ function setupTimeline(timeline) {
 
     path.style.strokeDashoffset = String(pathLength * (1 - progress));
 
-    const visibleIndex = metrics.itemTops.reduce(
-      (last, itemTop, index) =>
-        itemTop - scrollPosition < metrics.viewport * 0.76 ? index : last,
+    const visibleIndex = metrics.itemProgresses.reduce(
+      (last, itemProgress, index) =>
+        itemProgress <= progress ? index : last,
       -1,
     );
     if (visibleIndex !== lastVisibleIndex) {
