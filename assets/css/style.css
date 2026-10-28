@@ -419,6 +419,11 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+.project-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
 .experience {
   position: relative;
   background: var(--white);
@@ -906,6 +911,9 @@ h1 {
     background-color 0.2s,
     border-color 0.2s,
     transform 0.2s;
+}
+.project-links .project-link {
+  margin-top: 0;
 }
 .project-link:hover {
   background: #eff0f6;
