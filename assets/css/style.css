@@ -503,6 +503,9 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
+.timeline-item.visible .year {
+  color: var(--ink);
+}
 .timeline-content .date {
   font:
     10px "DM Mono",
@@ -533,6 +536,15 @@ h1 {
   transform: translateX(-50%);
   margin-top: 90px;
   z-index: 3;
+  opacity: 0;
+  scale: 0.6;
+  transition:
+    opacity 0.45s ease,
+    scale 0.45s ease;
+}
+.timeline-item.visible .timeline-dot {
+  opacity: 1;
+  scale: 1;
 }
 .contact {
   background: var(--dark);
