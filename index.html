@@ -1,246 +1,88 @@
 <!doctype html>
 <html lang="pt-PT">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Portfólio de Lucas Curto: desenvolvimento web, APIs, dados, Cosmetics Hub e projetos colaborativos.">
-    <meta name="theme-color" content="#07152c">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Lucas Curto — Portfólio">
-    <meta property="og:description" content="Fullstack / Web / APIs / Data.">
-    <title>Lucas Curto — Portfólio</title>
-    <link rel="icon" href="images/transferir.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Portfólio de Lucas Curto — desenvolvimento de software orientado a problemas reais.">
+  <meta name="theme-color" content="#111318">
+  <meta property="og:image" content="images/og-portfolio.png">
+  <title>Lucas Curto — Portfólio</title>
+  <link rel="icon" href="images/transferir.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-    <header class="site-header">
-        <nav class="site-nav" aria-label="Navegação principal">
-            <a class="brand" href="#inicio" aria-label="Lucas Curto — início"><span class="brand-mark">LC</span><span
-                    class="brand-name">Lucas Curto</span></a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu"
-                aria-label="Abrir navegação"><span></span><span></span><span></span></button>
-            <div class="nav-menu" id="main-menu"><a class="nav-link" href="#sobre">Sobre</a><a class="nav-link"
-                    href="#cosmetics-hub">Cosmetics Hub</a><a class="nav-link" href="#stack">Tecnologias</a><a
-                    class="nav-link is-active" href="#projetos" aria-current="page">Projetos</a><a class="nav-contact"
-                    href="#contacto"><span class="icon-envelope" aria-hidden="true"></span>Contacto</a></div>
-        </nav>
-    </header>
-    <main class="container">
-        <section id="inicio" class="hero-section" aria-labelledby="hero-title">
-            <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 1200 260" preserveAspectRatio="none">
-                    <defs>
-                        <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#16d9ff" />
-                            <stop offset="52%" stop-color="#6c5cff" />
-                            <stop offset="100%" stop-color="#ec3988" />
-                        </linearGradient>
-                        <filter id="neonGlow">
-                            <feGaussianBlur stdDeviation="3.2" result="blur" />
-                            <feMerge>
-                                <feMergeNode in="blur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                    </defs>
-                    <path class="circuit-line"
-                        d="M0 181 H127 V145 H185 V105 H245 V145 H310 V182 H379 V222 H499 V163 H565 V120 H642 V120 H697 V67 H785 V67" />
-                    <path class="circuit-line pink" d="M872 0 V52 H1041 V0 M1085 260 V185 H1156 V134 H1200" />
-                    <path class="curve-line" d="M0 200 C145 143,273 232,421 187 S649 49,803 80 S1019 97,1200 146" />
-                    <circle class="dot cyan" cx="793" cy="165" r="4.5" filter="url(#neonGlow)" />
-                    <circle class="dot violet" cx="900" cy="122" r="4" filter="url(#neonGlow)" />
-                    <circle class="dot pink" cx="1058" cy="38" r="5" filter="url(#neonGlow)" />
-                </svg></div>
-            <div class="hero-copy">
-                <p class="eyebrow">LC // PROFILE 01</p>
-                <h1 id="hero-title">Lucas Curto</h1>
-                <p class="hero-role">FULLSTACK <span>/</span> WEB <span>/</span> APIs <span>/</span> DATA</p>
-                <div class="gradient-rule"></div>
-                <p class="hero-caption">building systems layer by layer</p>
-            </div>
-        </section>
+  <header class="topbar">
+    <a class="brand" href="#inicio">LC <span>/ portfólio</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">MENU</button>
+    <nav class="nav" id="main-nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#competencias">Competências</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#percurso">Percurso</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-        <section id="projetos" class="content-section first-project" aria-labelledby="project-title">
-            <div class="project-feature">
-                <div class="project-feature-copy">
-                    <p class="section-kicker">PROJETO COLABORATIVO · CESAE</p>
-                    <h2 id="project-title">CESAE Lisboa — Grupo 2</h2>
-                    <p class="project-lead">Site responsivo desenvolvido em grupo.</p>
-                    <p>Projeto académico desenvolvido em equipa para a recriação do site institucional da CESAE Digital.
-                        Foco em design responsivo, boas práticas de código e trabalho colaborativo.</p>
-                </div>
-                <figure class="project-feature-media"><img src="images/cesae-mockup.png"
-                        alt="Mockup do site CESAE Digital em ecrãs desktop e mobile" loading="eager"></figure>
-                <div class="project-feature-footer">
-                    <div class="chip-row"><span class="tech-chip">HTML5</span><span class="tech-chip">CSS3</span><span
-                            class="tech-chip">Bootstrap</span><span class="tech-chip">Git/GitHub</span></div>
-                    <div class="project-actions"><a class="button button-primary"
-                            href="https://lc-curto.github.io/html-css-bootstrap-git-github/" target="_blank"
-                            rel="noopener noreferrer"><span class="arrow-icon">→</span>Ver site</a><a
-                            class="button button-secondary"
-                            href="https://github.com/lc-curto/html-css-bootstrap-git-github" target="_blank"
-                            rel="noopener noreferrer"><span class="github-icon">●</span>Ver repositório</a></div>
-                </div>
-            </div>
-        </section>
+  <main>
+    <section class="hero" id="inicio">
+      <svg class="network" viewBox="0 0 500 500" aria-hidden="true">
+        <g><line x1="30" y1="80" x2="145" y2="125"/><line x1="145" y1="125" x2="220" y2="60"/><line x1="145" y1="125" x2="235" y2="220"/><line x1="235" y1="220" x2="355" y2="190"/><line x1="355" y1="190" x2="440" y2="280"/><line x1="235" y1="220" x2="180" y2="345"/><line x1="180" y1="345" x2="300" y2="405"/><line x1="300" y1="405" x2="440" y2="280"/></g>
+        <g><circle cx="30" cy="80" r="3"/><circle cx="145" cy="125" r="3"/><circle cx="220" cy="60" r="3"/><circle cx="235" cy="220" r="3"/><circle cx="355" cy="190" r="3"/><circle cx="440" cy="280" r="3"/><circle cx="180" cy="345" r="3"/><circle cx="300" cy="405" r="3"/></g>
+      </svg>
+      <div class="hero-inner">
+        <div class="eyebrow">Portfólio pessoal · 2026</div>
+        <h1>Lucas<br><span>Curto.</span></h1>
+        <p class="hero-copy">Desenvolvimento de software orientado a resolver problemas reais — APIs, aplicações web, dados e automação.</p>
+        <div class="hero-actions"><a class="button primary" href="#projetos">Explorar projetos <span>↘</span></a><a class="button" href="#percurso">Ver trajetória <span>↓</span></a></div>
+      </div>
+      <div class="hero-meta">Portugal · Disponível para oportunidades</div>
+    </section>
 
-        <section id="contacto" class="contact-section first-contact" aria-labelledby="contact-title">
-            <div class="contact-strip">
-                <div class="contact-intro">
-                    <div class="layers-mark" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <div>
-                        <h2 id="contact-title">Interesse em colaborar?</h2>
-                        <p>Estou disponível para novos projetos e oportunidades.</p>
-                    </div>
-                </div>
-                <div class="contact-actions"><a class="button button-secondary"
-                        href="mailto:lucas.scurto@gmail.com"><span class="icon-envelope"
-                            aria-hidden="true"></span>Contacto <span>→</span></a></div>
-            </div>
-        </section>
+    <section class="section skills" id="competencias">
+      <div class="section-head"><div><div class="kicker">01 / Ferramentas</div><h2>O que uso<br>para construir.</h2></div><p class="section-intro">Tecnologias que fazem parte do meu percurso e dos projetos que estou a construir.</p></div>
+      <div class="skill-row">
+        <div class="skill"><span class="symbol">Py</span><div><strong>Python</strong><small>Backend</small></div></div>
+        <div class="skill"><span class="symbol">API</span><div><strong>FastAPI</strong><small>APIs REST</small></div></div>
+        <div class="skill"><span class="symbol">C#</span><div><strong>C#</strong><small>Aplicações</small></div></div>
+        <div class="skill"><span class="symbol">JS</span><div><strong>JavaScript</strong><small>Web</small></div></div>
+        <div class="skill"><span class="symbol">R</span><div><strong>React</strong><small>Frontend</small></div></div>
+        <div class="skill"><span class="symbol">SQL</span><div><strong>SQL / PostgreSQL</strong><small>Dados</small></div></div>
+        <div class="skill"><span class="symbol">B5</span><div><strong>Bootstrap</strong><small>UI responsiva</small></div></div>
+        <div class="skill"><span class="symbol">Git</span><div><strong>Git / GitHub</strong><small>Versionamento</small></div></div>
+      </div>
+    </section>
 
-        <section id="sobre" class="content-section journey-option-one" aria-labelledby="sobre-title">
-            <div class="journey-heading">
-                <p class="section-kicker">01 / A MINHA JORNADA</p>
-                <h2 id="sobre-title">De logística e operações ao desenvolvimento de software.</h2>
-            </div>
-            <div class="journey-option-grid">
-                <div class="journey-copy">
-                    <p class="lead-copy">Desde sempre, tenho curiosidade por tecnologia e pelos avanços tecnológicos.
-                        Depois de vários anos em logística e operações, estou a construir o meu percurso em
-                        desenvolvimento de software.</p>
-                    <p>Atualmente, frequento formação em Software Developer no <a
-                            href="https://pt.linkedin.com/school/cesae-digital/" target="_blank"
-                            rel="noopener noreferrer">CESAE Digital</a>. Em paralelo, tenho com a minha esposa um
-                        empreendimento particular no setor da distribuição de cosméticos.</p>
-                    <div class="journey-focus">
-                        <p class="section-kicker">O MEU FOCO AGORA</p><strong>Consolidar fundamentos, transformar
-                            aprendizagem em projetos concretos e evoluir por etapas.</strong>
-                    </div>
-                </div>
-                <figure class="journey-image"><img src="images/journey-logistics-software.png"
-                        alt="Operação logística transformada numa rede de software" loading="lazy">
-                    <figcaption class="section-kicker">PROCESSOS REAIS · SISTEMAS DIGITAIS</figcaption>
-                </figure>
-            </div>
-        </section>
+    <section class="section projects" id="projetos">
+      <div class="section-head"><div><div class="kicker">02 / Seleção de trabalho</div><h2>Projetos com<br>uma função.</h2></div><p class="section-intro">Menos cartões, mais contexto: o problema, a solução e as decisões técnicas por trás de cada projeto.</p></div>
+      <div class="project-grid">
+        <article class="project"><div class="project-top"><span>Projeto 01 · API</span><span class="project-icon">↗</span></div><h3>Cosmetics Hub</h3><p>MVP de gestão comercial para uma operação de distribuição de cosméticos, com foco em processos claros e construção por etapas.</p><div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Testes</span></div><a class="project-link" href="#contacto"><span>Projeto em construção</span><span>↗</span></a></article>
+        <article class="project"><div class="project-top"><span>Projeto 02 · Web</span><span class="project-icon">⌘</span></div><h3>Cosmetics Hub Web</h3><p>Estrutura inicial da interface web separada da API, pensada para evoluir com React e TypeScript.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">API</span></div><a class="project-link" href="#contacto"><span>Projeto em construção</span><span>↗</span></a></article>
+        <article class="project project-with-image"><img class="project-image" src="images/cesae-mockup.png" alt="Mockup do site CESAE Digital em ecrãs desktop e mobile" loading="lazy"><div class="project-top"><span>Projeto 03 · Colaborativo</span><span class="project-icon">⌘</span></div><h3>CESAE Digital</h3><p>Projeto colaborativo de desenvolvimento web com foco em responsividade, boas práticas e trabalho com Git.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span><span class="tag">Git</span></div><a class="project-link" href="https://lc-curto.github.io/html-css-bootstrap-git-github/" target="_blank" rel="noopener noreferrer"><span>Ver projeto</span><span>↗</span></a></article>
+      </div>
+    </section>
 
-        <section id="cosmetics-hub" class="content-section" aria-labelledby="cosmetics-title">
-            <div class="section-heading section-heading-row">
-                <div>
-                    <p class="section-kicker">02 / PROJETO PRINCIPAL</p>
-                    <h2 id="cosmetics-title">Cosmetics Hub</h2>
-                    <p>MVP de gestão comercial para empresas de cosméticos.</p>
-                </div><span class="status-pill amber">EM DESENVOLVIMENTO</span>
-            </div>
-            <div class="split-card">
-                <div>
-                    <h3>O problema e o objetivo</h3>
-                    <p>Reunir num só sistema os dados e fluxos comerciais que sustentam uma operação de distribuição:
-                        empresas, clientes, catálogo, inventário, encomendas e contas a receber.</p>
-                    <p class="muted-small">A implementação é feita por etapas. O âmbito do produto não significa que
-                        todos estes módulos estejam implementados.</p>
-                    <div class="scope-list">
-                        <span>Empresas</span><span>Clientes</span><span>Catálogo</span><span>Inventário</span><span>Encomendas</span><span>Contas
-                            a receber</span>
-                    </div>
-                </div>
-                <aside class="side-panel"><span class="status-label">ESTADO VERIFICÁVEL</span>
-                    <div class="status-row"><i class="status-dot green"></i>
-                        <p><strong>API · base funcional</strong><small>Endpoint de saúde, testes automatizados e
-                                PostgreSQL para desenvolvimento local.</small></p>
-                    </div>
-                    <div class="status-row"><i class="status-dot amber-dot"></i>
-                        <p><strong>Frontend · scaffold inicial</strong><small>Aplicação separada em React e TypeScript;
-                                funcionalidades ainda por desenvolver.</small></p>
-                    </div>
-                    <div class="stack-line">API · FastAPI <span>/</span> Web · React + TypeScript</div>
-                </aside>
-            </div>
-        </section>
+    <section class="section journey-intro" aria-labelledby="journey-title"><div class="journey-image-wrap"><img src="images/journey-logistics-software.png" alt="Operação logística transformada numa rede de software" loading="lazy"></div><div><div class="kicker">CONTEXTO</div><h2 id="journey-title">Da operação real às decisões do meu código.</h2><p class="section-intro">O meu percurso começou em logística e operações e passou por uma distribuidora familiar de cosméticos. Hoje, no CESAE Digital, estou a transformar esse contexto em desenvolvimento de software.</p></div></section>
 
-        <section id="stack" class="content-section" aria-labelledby="stack-title">
-            <div class="section-heading section-heading-row">
-                <div>
-                    <p class="section-kicker">03 / COMPETÊNCIAS</p>
-                    <h2 id="stack-title">Tecnologias por evidência.</h2>
-                </div>
-                <p>Aplicação em projetos e temas em formação, apresentados separadamente.</p>
-            </div>
-            <div class="tech-grid">
-                <article class="tech-card"><span class="status-pill green-pill">PROJETO EM DESENVOLVIMENTO</span>
-                    <h3>Cosmetics Hub · API</h3>
-                    <p>Base funcional e configuração local documentada.</p>
-                    <div class="chip-row"><span class="tech-chip">Python</span><span
-                            class="tech-chip">FastAPI</span><span class="tech-chip">PostgreSQL</span><span
-                            class="tech-chip">Testes</span></div>
-                </article>
-                <article class="tech-card"><span class="status-pill">SCAFFOLD INICIAL</span>
-                    <h3>Cosmetics Hub · Web</h3>
-                    <p>Estrutura inicial do frontend separado.</p>
-                    <div class="chip-row"><span class="tech-chip">React</span><span class="tech-chip">TypeScript</span>
-                    </div>
-                </article>
-                <article class="tech-card"><span class="status-pill violet-pill">PROJETO COLABORATIVO · CESAE</span>
-                    <h3>Site responsivo</h3>
-                    <p>Tecnologias usadas no projeto de grupo.</p>
-                    <div class="chip-row"><span class="tech-chip">HTML5</span><span class="tech-chip">CSS3</span><span
-                            class="tech-chip">Bootstrap</span><span class="tech-chip">Git/GitHub</span></div>
-                </article>
-                <article class="tech-card learning-card"><span class="status-pill">EM FORMAÇÃO</span>
-                    <h3>Fundamentos e novas áreas</h3>
-                    <p>Tópicos que continuo a aprofundar na formação.</p>
-                    <div class="chip-row"><span class="tech-chip">Algoritmos</span><span
-                            class="tech-chip">OOP</span><span class="tech-chip">SQL / NoSQL</span><span
-                            class="tech-chip">Qualidade</span><span class="tech-chip">Design patterns</span><span
-                            class="tech-chip">UML</span><span class="tech-chip">Mobile</span></div>
-                </article>
-            </div>
-        </section>
-
-        <section class="content-section secondary-project-section">
-            <div class="section-heading">
-                <p class="section-kicker">04 / CONTINUIDADE</p>
-                <h2>Trabalho colaborativo e percurso.</h2>
-            </div>
-            <div class="secondary-project">
-                <div><span class="status-pill">JORNADA CONTÍNUA</span>
-                    <h3>Repositório pessoal</h3>
-                    <p>Documentação do percurso de aprendizagem e projetos de desenvolvimento de software.</p>
-                </div><a class="button button-secondary" href="https://github.com/lc-curto/lc-curto" target="_blank"
-                    rel="noopener noreferrer">Ver perfil no GitHub ↗</a>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div><a class="footer-brand" href="#inicio">LC <span>Lucas Curto</span></a>
-                <p>Logística e operações · Curiosidade por tecnologia · Desenvolvimento em construção</p>
-            </div>
-            <div>
-                <h2>Explorar</h2><a href="#sobre">A minha jornada</a><a href="#cosmetics-hub">Cosmetics Hub</a><a
-                    href="#stack">Tecnologias</a><a href="#projetos">Projetos</a>
-            </div>
-            <div>
-                <h2>Encontrar-me</h2><a href="mailto:lucas.scurto@gmail.com">Email</a><a
-                    href="https://www.linkedin.com/in/lucas-curto-779a692b9/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/lc-curto" target="_blank"
-                    rel="noopener noreferrer">GitHub ↗</a>
-            </div>
+    <section class="section experience" id="percurso">
+      <div class="section-head"><div><div class="kicker">03 / Percurso</div><h2>Experiência &<br>formação.</h2></div><p class="section-intro">Uma linha temporal desenhada ao scroll. A curva SVG e a revelação sincronizam-se com a leitura da página.</p></div>
+      <div class="timeline-wrap" data-timeline>
+        <svg class="timeline-svg" aria-hidden="true"><path class="timeline-path" data-timeline-path></path></svg>
+        <div class="timeline-items">
+          <article class="timeline-item"><div class="year">2026<small>Atualidade</small></div><div class="timeline-content"><div class="date">2026 — em curso</div><h3>Desenvolvimento de software</h3><p>Formação técnica e construção de projetos práticos em APIs, bases de dados, aplicações web e controlo de versões.</p></div><span class="timeline-dot"></span></article>
+          <article class="timeline-item"><div class="year">2025<small>Projetos</small></div><div class="timeline-content"><div class="date">Projetos pessoais</div><h3>Aplicações e APIs</h3><p>Desenvolvimento de soluções próprias, com foco em modelação de dados, testes e resolução de problemas concretos.</p></div><span class="timeline-dot"></span></article>
+          <article class="timeline-item"><div class="year">2024<small>Operações</small></div><div class="timeline-content"><div class="date">Experiência profissional</div><h3>Operações e negócio</h3><p>Experiência em logística e operações, observando processos, dependências e necessidades reais.</p></div><span class="timeline-dot"></span></article>
+          <article class="timeline-item"><div class="year">2023<small>Fundamentos</small></div><div class="timeline-content"><div class="date">Aprendizagem contínua</div><h3>Dados, processos e tecnologia</h3><p>Construção gradual de fundamentos para transformar experiência prática em software útil.</p></div><span class="timeline-dot"></span></article>
         </div>
-        <div class="footer-bottom"><span>© <span data-current-year>2026</span> Lucas Curto · Feito com HTML, CSS e
-                Bootstrap.</span><a href="#inicio">Voltar ao início ↑</a></div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+      </div>
+    </section>
 
+    <section class="section contact" id="contacto"><div class="section-head"><div><div class="kicker">04 / Vamos conversar</div><h2>Um problema<br>para resolver?</h2></div></div><div class="contact-grid"><div class="contact-copy"><p>Estou interessado em oportunidades para aprender, colaborar e desenvolver soluções úteis.</p><div class="contact-links"><a href="https://github.com/lc-curto" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/lucas-curto-779a692b9/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:lucas.scurto@gmail.com">Email ↗</a></div></div><form class="contact-form" data-contact-form><input aria-label="Nome" placeholder="O teu nome" required><input type="email" aria-label="Email" placeholder="O teu email" required><input aria-label="Assunto" placeholder="Assunto"><textarea aria-label="Mensagem" placeholder="A tua mensagem" required></textarea><button class="button primary" type="submit">Preparar email ↗</button><small>O formulário abre o teu programa de email; não envia dados para um servidor.</small></form></div></section>
+  </main>
+  <footer class="footer"><span>Lucas Curto · Portfólio</span><span>Design direction / 2026</span></footer>
+  <a class="backtop" data-backtop href="#inicio" aria-label="Voltar ao topo">↑</a>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
