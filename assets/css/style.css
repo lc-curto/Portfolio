@@ -468,7 +468,7 @@ h1 {
   order: 1;
 }
 .year {
-  font-size: clamp(60px, 9vw, 118px);
+  font-size: clamp(60px, 9vw, 70px);
   font-weight: 500;
   letter-spacing: -0.09em;
   color: var(--ink);
