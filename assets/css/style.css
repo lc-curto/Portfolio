@@ -525,30 +525,6 @@ h1 {
   color: #626577;
   margin: 0;
 }
-.timeline-dot {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--ink);
-  border: 4px solid white;
-  box-shadow: 0 0 0 1px var(--ink);
-  top: 50%;
-  left: 44%;
-  transform: translate(-50%, -50%) scale(0.6);
-  z-index: 3;
-  opacity: 0;
-  transition:
-    opacity 0.45s ease,
-    transform 0.45s ease;
-}
-.timeline-item:nth-child(even) .timeline-dot {
-  left: 56%;
-}
-.timeline-item.visible .timeline-dot {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
 .contact {
   background: var(--dark);
   color: #f7f7f3;
@@ -754,8 +730,7 @@ h1 {
     transform: none;
     padding: 18px;
   }
-  .timeline-svg,
-  .timeline-dot {
+  .timeline-svg {
     display: none;
   }
   .contact-grid {
@@ -897,11 +872,6 @@ h1 {
     text-align: right;
     justify-self: end;
     order: initial;
-  }
-  .timeline-dot {
-    top: 50%;
-    left: 50%;
-    margin-top: 0;
   }
 }
 .project-with-image {
