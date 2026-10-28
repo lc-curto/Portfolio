@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setupTimeline(timeline) {
   const path = timeline.querySelector("[data-timeline-path]");
+  const stage = timeline.querySelector(".timeline-stage");
   const items = [...timeline.querySelectorAll(".timeline-item")];
   const reducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
@@ -78,21 +79,22 @@ function setupTimeline(timeline) {
   let pathLength = 0;
   let frameRequested = false;
   let metrics = null;
-  let lastVisibleIndex = -1;
+  let lastActiveIndex = -2;
+  const stepProgresses = [0.16, 0.38, 0.6, 0.82];
 
   const buildPath = () => {
-    if (window.innerWidth <= 800) {
+    if (!stage || window.innerWidth <= 800) {
       path.style.display = "none";
       metrics = null;
       return;
     }
 
     path.style.display = "block";
-    const width = timeline.clientWidth;
-    const height = timeline.scrollHeight;
-    const points = items.map((item, index) => ({
+    const width = stage.clientWidth;
+    const height = stage.clientHeight;
+    const points = items.map((_, index) => ({
       x: width * (0.5 + (index % 2 === 0 ? -0.06 : 0.06)),
-      y: item.offsetTop + item.offsetHeight / 2,
+      y: height * [0.18, 0.4, 0.62, 0.84][index],
     }));
     const scaleX = 1000 / width;
     let d = `M ${width * 0.5 * scaleX} 0`;
@@ -116,52 +118,42 @@ function setupTimeline(timeline) {
 
     metrics = {
       top: timeline.getBoundingClientRect().top + window.scrollY,
-      height,
-      viewport: window.innerHeight,
-      itemTops: items.map(
-        (item) =>
-          timeline.getBoundingClientRect().top +
-          window.scrollY +
-          item.offsetTop,
-      ),
-      itemProgresses: items.map(
-        (item) => (item.offsetTop + item.offsetHeight * 0.35) / height,
-      ),
+      scrollDistance: Math.max(1, timeline.offsetHeight - stage.offsetHeight),
     };
-    lastVisibleIndex = -1;
+    lastActiveIndex = -1;
   };
 
   const updateTimeline = () => {
     frameRequested = false;
     if (!metrics || window.innerWidth <= 800) {
-      items.forEach((item) => item.classList.add("visible"));
+      items.forEach((item) => {
+        item.classList.remove("is-active", "is-past");
+      });
       return;
     }
 
-    const scrollPosition = window.scrollY;
     const progress = reducedMotion
       ? 1
       : Math.min(
           1,
-          Math.max(
-            0,
-            (scrollPosition + metrics.viewport * 0.82 - metrics.top) /
-              (metrics.height + metrics.viewport * 0.15),
-          ),
+          Math.max(0, (window.scrollY - metrics.top) / metrics.scrollDistance),
         );
 
     path.style.strokeDashoffset = String(pathLength * (1 - progress));
 
-    const visibleIndex = metrics.itemProgresses.reduce(
-      (last, itemProgress, index) =>
-        itemProgress <= progress ? index : last,
+    const activeIndex = stepProgresses.reduce(
+      (last, stepProgress, index) =>
+        progress >= stepProgress ? index : last,
       -1,
     );
-    if (visibleIndex !== lastVisibleIndex) {
+    if (activeIndex !== lastActiveIndex) {
       items.forEach((item, index) =>
-        item.classList.toggle("visible", index <= visibleIndex),
+        item.classList.toggle("is-active", index === activeIndex),
       );
-      lastVisibleIndex = visibleIndex;
+      items.forEach((item, index) =>
+        item.classList.toggle("is-past", index < activeIndex),
+      );
+      lastActiveIndex = activeIndex;
     }
   };
 
