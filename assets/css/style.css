@@ -1175,6 +1175,12 @@ body {
   }
 }
 
+@media (max-width: 1024px) {
+  .side-menu {
+    display: none !important;
+  }
+}
+
 .side-menu.is-hidden {
   opacity: 0;
   visibility: hidden;
