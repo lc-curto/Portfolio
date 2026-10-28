@@ -15,7 +15,7 @@
 
     <title>Lucas Curto — Portfólio</title>
 
-    <link rel="icon" href="images/transferir.svg" type="image/svg+xml" />
+    <link rel="icon" href="images/favicon.png" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
       rel="stylesheet"
     />
 
-    <!-- Bootstrap 5.3.8: grelha, espaçamento e comportamento responsivo -->
+    <!-- Bootstrap 5.3.8 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,17 +33,84 @@
       crossorigin="anonymous"
     />
 
-    <!-- Estilos próprios: identidade visual e componentes personalizados -->
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Ícones das tecnologias -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- Estilos próprios -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
     <!-- ========================================
+         MENU LATERAL FIXO
+         ======================================== -->
+
+    <aside class="side-menu" aria-label="Menu lateral">
+      <a href="#inicio" class="side-menu-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+        <span>back to top</span>
+      </a>
+
+      <nav class="side-menu-socials" aria-label="Redes sociais">
+        <a
+          href="https://github.com/lc-curto"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="bi bi-github" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/lucas-curto-779a692b9/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="bi bi-linkedin" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://x.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <i class="bi bi-twitter-x" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="bi bi-instagram" aria-hidden="true"></i>
+        </a>
+      </nav>
+
+      <div class="side-menu-line" aria-hidden="true"></div>
+    </aside>
+
+    <!-- ========================================
          NAVEGAÇÃO PRINCIPAL
          ======================================== -->
 
     <header class="topbar">
-      <a class="brand" href="#inicio"> LC <span>/ portfólio</span> </a>
+      <a class="brand" href="#inicio">
+        <img src="images/lc._Logo.png" alt="logo" />
+      </a>
 
       <button
         class="menu-button"
@@ -143,7 +210,9 @@
 
         <div class="skill-row">
           <div class="skill">
-            <span class="symbol">Py</span>
+            <span class="symbol" aria-hidden="true">
+              <i class="devicon-python-plain colored"></i>
+            </span>
             <div>
               <strong>Python</strong>
               <small>Backend</small>
@@ -151,7 +220,9 @@
           </div>
 
           <div class="skill">
-            <span class="symbol">API</span>
+            <span class="symbol" aria-hidden="true">
+              <i class="devicon-fastapi-plain colored"></i>
+            </span>
             <div>
               <strong>FastAPI</strong>
               <small>APIs REST</small>
@@ -159,7 +230,9 @@
           </div>
 
           <div class="skill">
-            <span class="symbol">C#</span>
+            <span class="symbol" aria-hidden="true">
+              <i class="devicon-csharp-plain colored"></i>
+            </span>
             <div>
               <strong>C#</strong>
               <small>Aplicações</small>
@@ -167,7 +240,9 @@
           </div>
 
           <div class="skill">
-            <span class="symbol">JS</span>
+            <span class="symbol" aria-hidden="true">
+              <i class="devicon-javascript-plain colored"></i>
+            </span>
             <div>
               <strong>JavaScript</strong>
               <small>Web</small>
@@ -175,7 +250,9 @@
           </div>
 
           <div class="skill">
-            <span class="symbol">R</span>
+            <span class="symbol" aria-hidden="true">
+              <i class="devicon-react-original colored"></i>
+            </span>
             <div>
               <strong>React</strong>
               <small>Frontend</small>
@@ -183,7 +260,9 @@
           </div>
 
           <div class="skill">
-            <span class="symbol">SQL</span>
+            <span class="symbol" aria-hidden="true">
+              <i class="devicon-postgresql-plain colored"></i>
+            </span>
             <div>
               <strong>SQL / PostgreSQL</strong>
               <small>Dados</small>
@@ -191,7 +270,9 @@
           </div>
 
           <div class="skill">
-            <span class="symbol">B5</span>
+            <span class="symbol" aria-hidden="true">
+              <i class="devicon-bootstrap-plain colored"></i>
+            </span>
             <div>
               <strong>Bootstrap</strong>
               <small>UI responsiva</small>
@@ -199,7 +280,9 @@
           </div>
 
           <div class="skill">
-            <span class="symbol">Git</span>
+            <span class="symbol" aria-hidden="true">
+              <i class="devicon-git-plain colored"></i>
+            </span>
             <div>
               <strong>Git / GitHub</strong>
               <small>Versionamento</small>
@@ -220,8 +303,6 @@
           </div>
         </div>
 
-        <!-- Bootstrap Grid: dois cartões por linha em ecrãs grandes,
-             um cartão por linha em ecrãs pequenos. g-4 controla os espaços. -->
         <div class="row row-cols-1 row-cols-lg-2 g-4 project-grid">
           <div class="col">
             <!-- Projeto 01: Distribution Hub -->
@@ -344,9 +425,8 @@
       </section>
 
       <!-- ========================================
-      03 / PERCURSO E EXPERIÊNCIA
-      Cronologia: do passado ao presente
-      ======================================== -->
+           03 / PERCURSO E EXPERIÊNCIA
+           ======================================== -->
 
       <section class="section experience" id="percurso">
         <div class="section-head">
@@ -567,7 +647,7 @@
                 LinkedIn ↗
               </a>
 
-              <a href="mailto:lucas.scurto@gmail.com"> Email ↗ </a>
+              <a href="mailto:lucas.scurto@gmail.com">Email ↗</a>
             </div>
           </div>
 
@@ -612,13 +692,11 @@
     </footer>
 
     <!-- Botão para voltar ao topo -->
-
     <a class="backtop" data-backtop href="#inicio" aria-label="Voltar ao topo">
       ↑
     </a>
 
-    <!-- Modal global para ampliar as imagens dos projetos.
-         Fica fora dos cartões para poder ser reutilizado pelas duas imagens. -->
+    <!-- Modal para ampliar as imagens dos projetos -->
     <div
       class="modal fade"
       id="imagePreview"
@@ -632,6 +710,7 @@
             <h2 class="visually-hidden" id="imagePreviewLabel">
               Pré-visualização da imagem
             </h2>
+
             <button
               type="button"
               class="btn-close btn-close-white ms-auto"
@@ -653,9 +732,7 @@
       </div>
     </div>
 
-    <!-- JavaScript principal -->
-
-    <!-- Bootstrap JavaScript: componentes interativos -->
+    <!-- Bootstrap JavaScript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -663,10 +740,10 @@
       defer
     ></script>
 
-    <!-- Interações específicas do portfólio -->
+    <!-- Interações do portfólio -->
     <script src="assets/js/main.js" defer></script>
 
-    <!-- Comportamento de ampliação das imagens dos projetos -->
+    <!-- Comportamento de ampliação das imagens -->
     <script>
       window.addEventListener("DOMContentLoaded", function () {
         const imagePreview = document.getElementById("imagePreview");

@@ -45,9 +45,10 @@ button {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(32, 38, 79, 0.08);
 }
-.brand {
-  font-weight: 800;
-  letter-spacing: -0.05em;
+.brand img {
+  width: 80px;
+  height: auto;
+  display: block;
 }
 .brand span {
   color: var(--muted);
@@ -214,7 +215,6 @@ h1 {
   padding-top: 80px;
 }
 
-/* Cabeçalho dos projetos: título à esquerda e descrição à direita. */
 .projects .section-head {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(250px, 0.6fr);
@@ -225,7 +225,6 @@ h1 {
   margin-bottom: 32px;
 }
 
-/* O kicker ocupa a primeira linha; título e descrição ficam lado a lado. */
 .projects .section-head > .kicker {
   grid-column: 1;
   grid-row: 1;
@@ -254,41 +253,95 @@ h1 {
 .skills {
   background: var(--white);
 }
+
 .skill-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0;
+  margin-top: 32px;
 }
+
 .skill {
-  border: 1px solid var(--line);
-  padding: 12px 15px;
-  border-radius: 2px;
+  border: none;
+  border-right: 1px solid var(--line);
+  padding: 12px 24px;
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
-  min-width: 140px;
+  min-width: 0;
 }
+
+.skill:first-child {
+  padding-left: 0;
+}
+
+.skill:last-child {
+  border-right: none;
+}
+
 .skill .symbol {
-  font:
-    14px "DM Mono",
-    monospace;
+  font: 20px "DM Mono", monospace;
   color: var(--ink);
   background: #eff0f6;
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
   display: grid;
   place-items: center;
 }
+
 .skill small {
-  font:
-    10px "DM Mono",
-    monospace;
+  font: 11px "DM Mono", monospace;
   color: var(--muted);
   display: block;
+  margin-top: 4px;
 }
+
 .skill strong {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Ecrãs médios */
+@media (max-width: 1100px) {
+  .skill-row {
+    row-gap: 12px;
+  }
+
+  .skill {
+    padding: 12px 18px;
+  }
+}
+
+/* Telemóveis */
+@media (max-width: 600px) {
+  .skill-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+
+  .skill {
+    padding: 8px 0;
+    border-right: none;
+    gap: 10px;
+  }
+
+  .skill .symbol {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .skill strong {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .skill small {
+    font-size: 10px;
+  }
 }
 .projects {
   background: #eeede8;
@@ -702,7 +755,7 @@ h1 {
     justify-content: space-between;
   }
 }
-/* Ajuste tipográfico para telemóveis pequenos. */
+
 @media (max-width: 480px) {
   .projects .section-head h2 {
     font-size: clamp(34px, 8.5vw, 40px);
@@ -758,15 +811,22 @@ h1 {
 .project-with-image {
   overflow: hidden;
 }
+/* Imagens dos cartões de projetos */
 .project-image {
   display: block;
-  width: calc(100% + 48px);
-  height: 170px;
-  object-fit: cover;
-  margin: -24px -24px 24px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
 }
-.project-with-image .project-top {
-  margin-top: 0;
+
+/* Preservar a proporção original da imagem */
+.project-with-image .project-image {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  background: #fff;
 }
 @media (max-width: 800px) {
   .journey-intro {
@@ -786,7 +846,6 @@ h1 {
   will-change: stroke-dashoffset;
 }
 
-/* Ajustes da proposta: corredor central para a timeline e ações discretas, mas clicáveis. */
 @media (min-width: 801px) {
   .timeline-item {
     position: relative;
@@ -859,7 +918,6 @@ h1 {
   }
 }
 
-/* Grafo da capa: entrada desenhada, nós vivos e parallax muito subtil. */
 .network {
   transform: translate3d(var(--network-x, 0px), var(--network-y, 0px), 0);
   transition: transform 0.28s ease-out;
@@ -922,12 +980,6 @@ h1 {
   }
 }
 
-/* =========================================================
-   LAYOUT COM BOOTSTRAP
-   O Bootstrap controla a grelha e o espaçamento responsivo.
-   O CSS próprio fica responsável pela identidade visual.
-   ========================================================= */
-
 .projects .section-head {
   display: flex;
   flex-direction: column;
@@ -949,7 +1001,6 @@ h1 {
   margin: 8px 0 0;
 }
 
-/* .row e .g-4 do Bootstrap determinam as colunas e os gutters. */
 .projects .project-grid {
   display: flex;
   flex-wrap: wrap;
@@ -968,12 +1019,10 @@ h1 {
   min-width: 0;
 }
 
-/* A imagem continua dentro do cartão e adapta-se à largura da coluna. */
 .projects .project-image {
   max-width: none;
 }
 
-/* Em mobile, Bootstrap empilha os cartões; apenas ajustamos a tipografia. */
 @media (max-width: 760px) {
   .projects .section-head {
     display: flex;
@@ -988,4 +1037,156 @@ h1 {
     line-height: 1.04;
     letter-spacing: -0.055em;
   }
+}
+
+   .side-menu {
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 64px;
+    height: 100vh;
+    height: 100dvh;
+
+    margin: 0;
+    padding: 0;
+
+    background: rgba(247, 245, 242, 0.08);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    border: none;
+    border-radius: 0;
+
+    color: #30365f;
+  }
+
+.side-menu-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0;
+  padding: 96px 0 0;
+
+  color: #30365f;
+  text-decoration: none;
+}
+
+.side-menu-top svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.side-menu-top span {
+  writing-mode: vertical-rl;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.side-menu-top:hover {
+  color: #777ca8;
+}
+
+.side-menu-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: auto;
+  padding: 0 0 12px;
+}
+
+.side-menu-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  color: #30365f;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+.side-menu-socials a:hover {
+  color: #777ca8;
+}
+
+.side-menu-line {
+  display: block;
+  flex: 0 0 96px;
+
+  width: 2px;
+  height: 96px;
+
+  background: #30365f;
+}
+
+body {
+  padding-left: 0 !important;
+}
+
+@media (max-width: 576px) {
+  .side-menu {
+    width: 46px;
+  }
+
+  .side-menu-top {
+    padding-top: 96px;
+  }
+
+  .side-menu-top svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .side-menu-top span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .side-menu-socials {
+    gap: 14px;
+  }
+
+  .side-menu-socials a {
+    font-size: 17px;
+  }
+
+  .side-menu-line {
+    flex-basis: 72px;
+    height: 72px;
+  }
+}
+
+.side-menu.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
