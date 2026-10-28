@@ -397,6 +397,7 @@ h1 {
   gap: 6px;
   flex-wrap: wrap;
   margin-top: auto;
+  margin-bottom: 14px;
 }
 .tag {
   display: inline-grid;
@@ -912,6 +913,10 @@ h1 {
 @media (max-width: 800px) {
   .project-image {
     height: 190px;
+  }
+
+  .tags {
+    margin-bottom: 18px;
   }
 }
 
