@@ -82,7 +82,9 @@ button {
   align-items: center;
   gap: 24px;
 
-  font: 11px "DM Mono", monospace;
+  font:
+    11px "DM Mono",
+    monospace;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -103,7 +105,9 @@ button {
   border: 1px solid var(--line);
   background: transparent;
 
-  font: 11px "DM Mono", monospace;
+  font:
+    11px "DM Mono",
+    monospace;
 }
 
 /* =========================================================
@@ -134,7 +138,6 @@ button {
   );
 
   background-size: 31px 31px;
-
   opacity: 0.35;
 
   mask-image: linear-gradient(
@@ -156,7 +159,9 @@ button {
 
 .eyebrow,
 .kicker {
-  font: 11px "DM Mono", monospace;
+  font:
+    11px "DM Mono",
+    monospace;
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
@@ -212,7 +217,9 @@ h1 {
   border: 1px solid #575b6b;
   border-radius: 2px;
 
-  font: 11px "DM Mono", monospace;
+  font:
+    11px "DM Mono",
+    monospace;
   text-transform: uppercase;
   letter-spacing: 0.07em;
 
@@ -238,7 +245,9 @@ h1 {
   bottom: 35px;
 
   color: #9296a6;
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -254,11 +263,7 @@ h1 {
 
   opacity: 0.7;
 
-  transform: translate3d(
-    var(--network-x, 0px),
-    var(--network-y, 0px),
-    0
-  );
+  transform: translate3d(var(--network-x, 0px), var(--network-y, 0px), 0);
 
   transition: transform 0.28s ease-out;
   will-change: transform;
@@ -270,8 +275,7 @@ h1 {
   stroke-dasharray: 150;
   stroke-dashoffset: 150;
 
-  animation: draw-network 1.6s
-    cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  animation: draw-network 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
 .network line:nth-child(2n) {
@@ -355,6 +359,7 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+
   margin-bottom: 32px;
 }
 
@@ -372,12 +377,14 @@ h1 {
   font-weight: 600;
   line-height: 1.02;
   letter-spacing: -0.06em;
+
   text-wrap: balance;
 }
 
 .projects .section-intro {
   max-width: 360px;
   margin: 0 0 5px;
+
   font-size: 14px;
   line-height: 1.7;
 }
@@ -385,8 +392,10 @@ h1 {
 .projects .project-grid {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 
   max-width: none;
+
   margin-right: calc(-0.5 * var(--bs-gutter-x, 1.5rem));
   margin-left: calc(-0.5 * var(--bs-gutter-x, 1.5rem));
 }
@@ -396,25 +405,10 @@ h1 {
   min-width: 0;
 }
 
-.projects .project {
-  display: flex;
-  flex-direction: column;
+.projects .project-grid > .col > .project {
+  width: 100%;
 }
-.projects .project > p {
-  min-height: 3em;
-  margin-bottom: 25px;
-}
-.projects .project .tags {
-  margin-top: 0;
-  margin-bottom: 24px;
-}
-.projects .project > .project-link,
-.projects .project > .project-links {
-  margin-top: auto;
-}
-.projects .project .project-links .project-link {
-  margin-top: 0;
-}
+
 /* =========================================================
    6. CARTÕES DE PROJETOS
    ========================================================= */
@@ -423,7 +417,10 @@ h1 {
   display: flex;
   flex-direction: column;
 
+  width: 100%;
+  min-width: 0;
   min-height: 300px;
+
   padding: 24px;
 
   background: var(--white);
@@ -445,7 +442,9 @@ h1 {
   align-items: center;
 
   color: var(--muted);
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
   text-transform: uppercase;
 }
 
@@ -472,6 +471,7 @@ h1 {
 
 .project p {
   margin: 0 0 25px;
+
   color: #66697a;
   font-size: 13px;
 }
@@ -483,6 +483,7 @@ h1 {
 .tags {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
 
   margin-top: auto;
@@ -523,6 +524,7 @@ h1 {
 
   width: 100%;
   min-height: 40px;
+
   margin-top: 22px;
   padding: 10px 12px;
 
@@ -532,7 +534,9 @@ h1 {
   background: #f8f7f2;
   color: var(--ink);
 
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 
@@ -566,8 +570,9 @@ h1 {
   display: block;
 
   width: 100%;
-  height: 190px;
+  height: 220px;
   max-width: none;
+  flex-shrink: 0;
 
   object-fit: cover;
   object-position: center;
@@ -577,7 +582,62 @@ h1 {
 }
 
 /* =========================================================
-   10. COMPETÊNCIAS
+   10. UNIFORMIZAÇÃO DOS CARTÕES DE PROJETOS
+   ========================================================= */
+
+/*
+   Os cartões ocupam a mesma altura dentro da linha da grelha.
+   A estrutura flexível organiza o conteúdo verticalmente.
+*/
+
+.projects .project {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+/*
+   Reserva espaço para títulos e descrições.
+   Isto evita que diferenças de texto desloquem as tecnologias.
+*/
+
+.projects .project h3 {
+  min-height: 1.1em;
+}
+
+.projects .project > p {
+  min-height: 3em;
+  margin-bottom: 24px;
+}
+
+/*
+   Remove a distribuição automática de espaço acima das tecnologias
+   apenas nos cartões da secção de projetos em destaque.
+*/
+
+.projects .project .tags {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/*
+   Os links ficam alinhados na base dos cartões.
+*/
+
+.projects .project > .project-link,
+.projects .project > .project-links {
+  margin-top: auto;
+}
+
+.projects .project .project-links .project-link {
+  margin-top: 0;
+}
+
+/* =========================================================
+   11. COMPETÊNCIAS
    ========================================================= */
 
 .skills {
@@ -588,6 +648,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0;
+
   margin-top: 32px;
 }
 
@@ -622,7 +683,9 @@ h1 {
   background: #eff0f6;
   color: var(--ink);
 
-  font: 20px "DM Mono", monospace;
+  font:
+    20px "DM Mono",
+    monospace;
 }
 
 .skill strong {
@@ -636,11 +699,13 @@ h1 {
   margin-top: 4px;
 
   color: var(--muted);
-  font: 11px "DM Mono", monospace;
+  font:
+    11px "DM Mono",
+    monospace;
 }
 
 /* =========================================================
-   11. JORNADA E EXPERIÊNCIA
+   12. JORNADA E EXPERIÊNCIA
    ========================================================= */
 
 .journey-intro {
@@ -678,17 +743,19 @@ h1 {
 }
 
 /* =========================================================
-   12. TIMELINE
+   13. TIMELINE
    ========================================================= */
 
 .experience {
   position: relative;
   overflow: hidden;
+
   background: var(--white);
 }
 
 .timeline-wrap {
   position: relative;
+
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -755,7 +822,9 @@ h1 {
   margin-top: 8px;
 
   color: var(--muted);
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -805,7 +874,9 @@ h1 {
 
 .timeline-content .date {
   color: var(--muted);
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -819,11 +890,13 @@ h1 {
 
 .timeline-content p {
   margin: 0;
+
   color: #626577;
   font-size: 13px;
 }
 
-/* Espaçamento consistente entre descrição, tecnologias e links */
+/* Espaçamento específico da timeline */
+
 .timeline-content .tags {
   display: flex;
   flex-wrap: wrap;
@@ -846,7 +919,7 @@ h1 {
 }
 
 /* =========================================================
-   13. CONTACTOS E FORMULÁRIO
+   14. CONTACTOS E FORMULÁRIO
    ========================================================= */
 
 .contact {
@@ -866,6 +939,7 @@ h1 {
 
 .contact-copy p {
   max-width: 360px;
+
   color: #b6b8c3;
   font-size: 14px;
 }
@@ -874,6 +948,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
   margin-top: 25px;
 }
 
@@ -883,7 +958,9 @@ h1 {
 
   border-bottom: 1px solid #5b5e6a;
 
-  font: 11px "DM Mono", monospace;
+  font:
+    11px "DM Mono",
+    monospace;
   text-transform: uppercase;
 }
 
@@ -901,7 +978,9 @@ h1 {
   background: transparent;
   color: #fff;
 
-  font: 12px "DM Mono", monospace;
+  font:
+    12px "DM Mono",
+    monospace;
   outline: none;
 }
 
@@ -922,11 +1001,13 @@ h1 {
 
 .contact-form small {
   color: #9da0ad;
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
 }
 
 /* =========================================================
-   14. RODAPÉ E BOTÃO DE REGRESSO AO TOPO
+   15. RODAPÉ E BOTÃO DE REGRESSO AO TOPO
    ========================================================= */
 
 .footer {
@@ -938,7 +1019,9 @@ h1 {
   background: #0c0e12;
   color: #9296a6;
 
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
   text-transform: uppercase;
 }
 
@@ -970,12 +1053,13 @@ h1 {
 }
 
 /* =========================================================
-   15. MENU LATERAL
+   16. MENU LATERAL
    ========================================================= */
 
 .side-menu {
   position: fixed !important;
   z-index: 1100;
+
   top: 0;
   bottom: 0;
   left: 0;
@@ -995,6 +1079,7 @@ h1 {
   border-radius: 0;
 
   background: rgba(247, 245, 242, 0.08);
+
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 
@@ -1089,7 +1174,7 @@ h1 {
 }
 
 /* =========================================================
-   16. ACESSIBILIDADE
+   17. ACESSIBILIDADE
    ========================================================= */
 
 .button:focus-visible,
@@ -1133,7 +1218,7 @@ h1 {
 }
 
 /* =========================================================
-   17. RESPONSIVIDADE — ECRÃS MÉDIOS
+   18. RESPONSIVIDADE — ECRÃS MÉDIOS
    ========================================================= */
 
 @media (max-width: 1100px) {
@@ -1147,7 +1232,7 @@ h1 {
 }
 
 /* =========================================================
-   18. RESPONSIVIDADE — TABLETS E TELEMÓVEIS
+   19. RESPONSIVIDADE — TABLETS E TELEMÓVEIS
    ========================================================= */
 
 @media (max-width: 800px) {
@@ -1161,6 +1246,7 @@ h1 {
 
   .nav {
     position: absolute;
+
     top: 58px;
     right: 0;
     left: 0;
@@ -1209,6 +1295,7 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
+
     margin-bottom: 30px;
   }
 
@@ -1219,6 +1306,7 @@ h1 {
     font-size: clamp(36px, 7vw, 48px);
     line-height: 1.04;
     letter-spacing: -0.055em;
+
     overflow-wrap: break-word;
   }
 
@@ -1238,7 +1326,17 @@ h1 {
     height: 190px;
   }
 
-  .tags {
+  /*
+     Em ecrãs pequenos, as descrições podem ter alturas naturais.
+     Os cartões continuam a ocupar a largura disponível.
+  */
+
+  .projects .project > p {
+    min-height: 0;
+  }
+
+  .projects .project .tags {
+    margin-top: 0;
     margin-bottom: 18px;
   }
 
@@ -1272,6 +1370,7 @@ h1 {
   .timeline-item:nth-child(even) .year {
     grid-column: auto;
     grid-row: auto;
+
     justify-self: start;
     order: initial;
 
@@ -1283,6 +1382,7 @@ h1 {
   .timeline-item:nth-child(even) .timeline-content {
     grid-column: auto;
     grid-row: auto;
+
     justify-self: stretch;
     order: initial;
 
@@ -1291,6 +1391,7 @@ h1 {
     padding: 18px;
 
     text-align: left;
+
     opacity: 1;
     transform: none;
   }
@@ -1325,7 +1426,7 @@ h1 {
 }
 
 /* =========================================================
-   19. RESPONSIVIDADE — COMPETÊNCIAS EM TELEMÓVEIS
+   20. RESPONSIVIDADE — COMPETÊNCIAS EM TELEMÓVEIS
    ========================================================= */
 
 @media (max-width: 600px) {
@@ -1358,7 +1459,7 @@ h1 {
 }
 
 /* =========================================================
-   20. RESPONSIVIDADE — TELEMÓVEIS PEQUENOS
+   21. RESPONSIVIDADE — TELEMÓVEIS PEQUENOS
    ========================================================= */
 
 @media (max-width: 576px) {
