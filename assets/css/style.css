@@ -399,13 +399,17 @@ h1 {
   margin-top: auto;
 }
 .tag {
-  font:
-    9px "DM Mono",
-    monospace;
-  text-transform: uppercase;
+  display: inline-grid;
+  place-items: center;
+  min-width: 32px;
+  min-height: 28px;
   border: 1px solid var(--line);
-  padding: 5px 7px;
+  padding: 4px 7px;
   color: #626577;
+}
+.tag i {
+  font-size: 17px;
+  line-height: 1;
 }
 .project-link {
   display: flex;
