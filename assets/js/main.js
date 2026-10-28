@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('#main-nav');
   const backtop = document.querySelector('[data-backtop]');
   const sections = [...document.querySelectorAll('main section[id]')];
+  const network = document.querySelector('.network');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (network && !reducedMotion) {
+    window.addEventListener('pointermove', (event) => {
+      const x = (event.clientX / window.innerWidth - .5) * 12;
+      const y = (event.clientY / window.innerHeight - .5) * 8;
+      network.style.setProperty('--network-x', `${x.toFixed(2)}px`);
+      network.style.setProperty('--network-y', `${y.toFixed(2)}px`);
+    }, { passive: true });
+  }
 
   menuButton?.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
@@ -63,11 +74,11 @@ function setupTimeline(timeline) {
     const width = timeline.clientWidth;
     const height = timeline.scrollHeight;
     const points = items.map((item, index) => ({
-      x: index % 2 === 0 ? width * .25 : width * .75,
+      x: width * (.5 + (index % 2 === 0 ? -.06 : .06)),
       y: item.offsetTop + item.offsetHeight / 2
     }));
     const scaleX = 1000 / width;
-    let d = `M ${points[0].x * scaleX} 0`;
+    let d = `M ${width * .5 * scaleX} 0`;
 
     points.forEach((point, index) => {
       const x = point.x * scaleX;
@@ -80,7 +91,6 @@ function setupTimeline(timeline) {
       d += ` C ${previous.x * scaleX} ${middle}, ${x} ${middle}, ${x} ${point.y}`;
     });
 
-    d += ` C 500 ${height - 100}, 500 ${height - 50}, 500 ${height}`;
     path.parentElement.setAttribute('viewBox', `0 0 1000 ${height}`);
     path.setAttribute('d', d);
     pathLength = path.getTotalLength();
