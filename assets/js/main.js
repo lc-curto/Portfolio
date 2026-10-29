@@ -157,12 +157,10 @@ function setupTimeline(timeline) {
         itemProgress <= progress ? index : last,
       -1,
     );
-    if (visibleIndex !== lastVisibleIndex) {
-      items.forEach((item, index) =>
-        item.classList.toggle("visible", index <= visibleIndex),
-      );
-      lastVisibleIndex = visibleIndex;
-    }
+    items.forEach((item, index) =>
+      item.classList.toggle("visible", index <= visibleIndex),
+    );
+    lastVisibleIndex = visibleIndex;
   };
 
   const requestUpdate = () => {
@@ -178,6 +176,13 @@ function setupTimeline(timeline) {
 
   window.addEventListener("scroll", requestUpdate, { passive: true });
   window.addEventListener("resize", rebuild, { passive: true });
+  window.addEventListener("orientationchange", rebuild, { passive: true });
+  window.visualViewport?.addEventListener("resize", rebuild, { passive: true });
+  if (window.ResizeObserver) {
+    const observer = new ResizeObserver(rebuild);
+    observer.observe(timeline);
+  }
+  document.fonts?.ready.then(rebuild);
   window.addEventListener("load", rebuild, { once: true });
   rebuild();
 }
