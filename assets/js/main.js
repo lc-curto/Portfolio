@@ -81,15 +81,26 @@ function setupTimeline(timeline) {
   let lastVisibleIndex = -1;
 
   const buildPath = () => {
-    if (window.innerWidth <= 800) {
+    const compactLayout = window.innerWidth <= 800;
+    const height = timeline.scrollHeight;
+
+    if (compactLayout) {
       path.style.display = "none";
-      metrics = null;
+      timeline.style.setProperty("--timeline-progress", "0%");
+      metrics = {
+        top: timeline.getBoundingClientRect().top + window.scrollY,
+        height,
+        viewport: window.innerHeight,
+        itemProgresses: items.map(
+          (item) => (item.offsetTop + item.offsetHeight * 0.2) / height,
+        ),
+      };
+      lastVisibleIndex = -1;
       return;
     }
 
     path.style.display = "block";
     const width = timeline.clientWidth;
-    const height = timeline.scrollHeight;
     const points = items.map((item, index) => ({
       x: width * (0.5 + (index % 2 === 0 ? -0.06 : 0.06)),
       y: item.offsetTop + item.offsetHeight / 2,
@@ -133,24 +144,25 @@ function setupTimeline(timeline) {
 
   const updateTimeline = () => {
     frameRequested = false;
-    if (!metrics || window.innerWidth <= 800) {
-      items.forEach((item) => item.classList.add("visible"));
+    if (!metrics) {
       return;
     }
 
-    const scrollPosition = window.scrollY;
+    const compactLayout = window.innerWidth <= 800;
+    const rect = timeline.getBoundingClientRect();
+    const viewport = window.visualViewport?.height || window.innerHeight;
+    const start = viewport * 0.2;
+    const end = viewport * 0.8;
+    const travel = Math.max(1, rect.height - (end - start));
     const progress = reducedMotion
       ? 1
-      : Math.min(
-          1,
-          Math.max(
-            0,
-            (scrollPosition + metrics.viewport * 0.82 - metrics.top) /
-              (metrics.height + metrics.viewport * 0.15),
-          ),
-        );
+      : Math.min(1, Math.max(0, (start - rect.top) / travel));
 
-    path.style.strokeDashoffset = String(pathLength * (1 - progress));
+    if (compactLayout) {
+      timeline.style.setProperty("--timeline-progress", `${progress * 100}%`);
+    } else {
+      path.style.strokeDashoffset = String(pathLength * (1 - progress));
+    }
 
     const visibleIndex = metrics.itemProgresses.reduce(
       (last, itemProgress, index) =>
